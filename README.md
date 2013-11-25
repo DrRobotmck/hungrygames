@@ -1,4 +1,0 @@
-hungrygames
-===========
-
-TheHungerGames.ly
