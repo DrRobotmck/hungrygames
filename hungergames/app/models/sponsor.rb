@@ -1,0 +1,2 @@
+class Sponsor < Citizen
+end

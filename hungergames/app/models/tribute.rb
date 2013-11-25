@@ -1,0 +1,2 @@
+class Tribut < Citizen
+end
