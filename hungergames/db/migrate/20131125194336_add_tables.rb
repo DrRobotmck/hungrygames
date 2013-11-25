@@ -4,9 +4,10 @@ class AddTables < ActiveRecord::Migration
   		c.string :name
   		c.integer :age
   		c.string :gender
-  		c.boolean :alive?
+  		c.boolean :alive
   		c.string :type
   		c.integer :rating
+      c.integer :district_id
   	end
 
   	create_table :games do |g|

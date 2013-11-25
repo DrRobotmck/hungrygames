@@ -20,9 +20,10 @@ ActiveRecord::Schema.define(version: 20131125194336) do
     t.string  "name"
     t.integer "age"
     t.string  "gender"
-    t.boolean "alive?"
+    t.boolean "alive"
     t.string  "type"
     t.integer "rating"
+    t.integer "district_id"
   end
 
   create_table "citizens_rounds", force: true do |t|
