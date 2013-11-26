@@ -2,34 +2,58 @@ require 'spec_helper'
 
 describe Gamemaker do
 	let(:game){Game.create(name: "Hungertron 5000")}
-	let(:district){District.new(name: "District 3")}
-	let(:trib1){Tribute.create(name: "poop", age: 6, gender: "m", alive: true, district_id: 1)}
-	let(:trib2){Tribute.create(name: "doop", age: 18, gender: "m", alive: true, district_id: 1)}
-	let(:trib3){Tribute.create(name: "snoop", age: 5, gender: "f", alive: true, district_id: 1)}
-	let(:trib4){Tribute.create(name: "boop", age: 18, gender: "f", alive: true, district_id: 1)}
-	let(:escort1){Escort.create(name: "loop", age: 20, gender: "f", alive: true, district_id: 1)}
+	let(:round){Round.all}
+	let(:district){District.all}
+		let(:tributes){Citizen.all}
+		let(:escort1){Citizen.all}
 
 	context "Reaping" do
-		let(:reaper){Gamemaker.new(game, district)}
-		before do
-			trib1.save!
-			trib2.save!
-			trib3.save!
-			trib4.save!
-			escort1.save!
-			district.id = 1
-			district.save
-		end
 		
+		before do
+			tributes.each{|x| x.save!}
+			escort1.each{|x| x.save!}
+			district.each{|x| x.save!}
+		end
+		let(:reaper){Gamemaker.new(game, district)}
 		it "selects two tributes from a district" do
 			reaping = reaper.select_tributes
-			expect(reaping.count).to eq(2)
-			expect(reaping[0].rating).to be > 0
+			expect(reaping.length).to eq(24)
+			expect(reaping.first.rating).to be > 0
+			expect(reaping.first.district_id).to eq(reaping[1].district_id)
+			expect(reaping[0].gender).to eq("m")
+			expect(reaping[1].gender).to eq("f")
 		end
 		it "selects one escort from one district" do
 			escort = reaper.select_escort
-			expect(escort.count).to eq(1)
-			expect(escort[0].district_id).to eq(district.id)
+			expect(escort.count).to eq(12)
+			expect(escort[0].district_id).to eq(district[0].id)
 		end
+
+		it "has 24 tributes" do
+			reaping = reaper.select_tributes
+			expect(reaping.length).to eq(24)
+		end
+
+	end
+
+	context "Round One: FIGHT!!" do
+		before do
+			round.each{|r| r.save!}
+			tributes.each{|x| x.save!}
+			escort1.each{|x| x.save!}
+			district.each{|x| x.save!}
+		end
+		let(:rounder){Gamemaker.new(game, district)}
+		it "Starts the game" do
+			rounder.select_tributes
+			rounder.select_escort
+			rounder.starter
+			expect(round.count).to be > 0
+			expect(rounder.tributes.count).to eq(24)
+			# binding.pry	
+			expect(rounder.tributes[0].rounds.length).to eq(rounder.rounds[0].length)
+
+		end
+
 	end
 end
