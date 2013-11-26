@@ -10,24 +10,24 @@ describe Citizen do
 				expect(citizen).to have(1).errors_on (:age)
 				expect(citizen).to have(1).errors_on (:gender)
 				expect(citizen).to have(1).errors_on (:district_id)
+				expect(citizen).to have(1).errors_on (:alive)
 			end
 		end
 		context "has information"	do
-			let(:dis){District.new}
 			
 			before do
-				dis.name = "number 1"
-				dis.save
 				citizen.name = "Mck"
 				citizen.age = 16
-				citizen.gender = "male"
+				citizen.gender = "m"
 				citizen.district_id = 1
+				citizen.alive = true
 			end
 			it "has a name, age, gender, and belongs to a district" do
 				expect(citizen).to have(0).errors_on (:name)
 				expect(citizen).to have(0).errors_on (:age)
 				expect(citizen).to have(0).errors_on (:gender)
 				expect(citizen).to have(0).errors_on (:district_id)
+				expect(citizen.alive).to be_true 
 			end
 		end
 	end
