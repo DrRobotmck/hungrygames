@@ -1,6 +1,5 @@
 class Gamemaker
 	attr_accessor :game, :district, :tributes, :rounds, :losers, :winner
-	a = 0
 	
 	def initialize(game, district)
 		@game = game
