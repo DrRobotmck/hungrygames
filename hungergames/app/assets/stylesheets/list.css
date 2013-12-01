@@ -1,0 +1,65 @@
+
+ p{
+ 	font-family: Helvetica;
+ 	font-size: 1em;
+ 	color: indianred;
+ 	text-align: center;
+ 	background-color: rgba(0,0,0,.7);
+ 	border: 5px solid rgba(43,34,34,1);
+ 	width:50%;
+ 	margin-left:25%;
+ 	float:left;
+  }
+ button{
+ 	background:url(http://i1341.photobucket.com/albums/o745/405nel/STAB_zps8e432554.gif);
+ 	background-size: 105%;
+ 	width: 200px;
+ 	height: 200px;
+ 	font-size: 1.5em;
+ 	font-family: Helvetica;
+ 	/*background-color: rgba(225,0,0,.3);*/
+ 	border: 2px solid rgba(43,34,34,1);
+ 	color: indianred;
+ 	margin-left: 40%;
+ }
+ button:hover{
+ 	-moz-box-shadow: 10px 10px 10px lavenderblush;
+  -webkit-box-shadow: 10px 10px 10px lavenderblush;
+  box-shadow: 5px 5px 5px lavenderblush;
+ }
+
+ .trib{
+ 	font-family: Helvetica;
+ 	font-size: 2em;
+ 	font-weight: bold;
+ 	color: goldenrod;
+ 	text-align: center;
+ 	background-color: rgba(0,0,0,.8);
+ 	border: 2px solid rgba(43,34,34,1);
+ }
+
+ .banner{
+ 	font-family: Garamond;
+ 	color: lavenderblush;
+ 	text-align: center;
+ 	background-color: rgba(43,34,34,.5);
+ 	border: 2px solid rgba(43,34,34,1);
+ 	width:75%;
+ 	margin-left: 12.5%;
+ }
+ .banner:hover{
+ 	-moz-box-shadow: 1px 5px 1px indianred;
+  -webkit-box-shadow: 1px 5px 1px indianred;
+  box-shadow: 1px 5px 1px indianred;
+ }
+ h1.banner{
+ 	font-size: 4em;
+ }
+ h3.banner{
+ 	font-size: 1.25em;
+ }
+
+ body{
+ 	background: url(http://static2.wikia.nocookie.net/__cb20120425034130/m__/merlin1/images/e/e1/Chain_Mail.jpg);
+ 	background-size: cover;
+ }
