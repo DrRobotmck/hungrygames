@@ -88,6 +88,7 @@ class Gamemaker
 				round_five.citizens.delete(fight_zone[num])
 			end
 		end
+		return @losers
 	end
 
 	def second_fight
@@ -122,6 +123,7 @@ class Gamemaker
 				round_five.citizens.delete(fight_zone[num])
 			end
 		end
+		return @losers
 	end
 
 	def third_fight
@@ -152,6 +154,7 @@ class Gamemaker
 				round_five.citizens.delete(fight_zone[num])
 			end
 		end
+		return @losers
 	end
 	def fourth_fight
 		round_four = Round.find(4)
@@ -175,6 +178,7 @@ class Gamemaker
 				round_four.citizens.delete(fight_zone[num])
 				round_five.citizens.delete(fight_zone[num])
 			end
+			return @losers
 	end
 
 	def finale
@@ -198,6 +202,7 @@ class Gamemaker
 				round_five.citizens.delete(fight_zone[num])
 				@winner << round_five.citizens.first
 			end
+			return [@losers,@winner]
 	end
 
 end

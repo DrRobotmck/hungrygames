@@ -1,31 +1,79 @@
 
+ .list{
+ 		border-radius: 1.25em;
+ 		margin-left: 10%;
+ 		width: 80%;
+ 		height: 400px;
+ 		overflow: scroll;
+	}
+	.loser1{
+		border-radius: 1.25em;
+		margin-left: 10%;
+		width: 80%;
+		height: 400px;
+		overflow: scroll;
+	}
+	.loser2{
+		border-radius: 1.25em;
+		margin-left: 10%;
+		width: 80%;
+		height: 350px;
+		overflow: scroll;
+	}
+	.loser3{
+		border-radius: 1.25em;
+		margin-left: 10%;
+		width: 80%;
+		height: 175px;
+		overflow: scroll;
+	}
+	.loser4{
+		border-radius: 1.25em;
+		margin-left: 10%;
+		width: 80%;
+		height: 100px;
+		overflow: scroll;
+	}
+
  p{
  	font-family: Helvetica;
  	font-size: 1em;
  	color: indianred;
  	text-align: center;
- 	background-color: rgba(0,0,0,.7);
+ 	background-color: rgba(0,0,0,.2);
  	border: 5px solid rgba(43,34,34,1);
  	width:50%;
  	margin-left:25%;
  	float:left;
   }
  button{
+ 	margin-top:5%;
  	background:url(http://i1341.photobucket.com/albums/o745/405nel/STAB_zps8e432554.gif);
  	background-size: 105%;
  	width: 200px;
  	height: 200px;
- 	font-size: 1.5em;
+ 	font-size: 4em;
  	font-family: Helvetica;
  	/*background-color: rgba(225,0,0,.3);*/
- 	border: 2px solid rgba(43,34,34,1);
+ 	border:none;
  	color: indianred;
- 	margin-left: 40%;
+ 	margin-left: 45%;
+ 	border-radius: 100%;
  }
+ /*button.play.fade{
+ 	opacity: 1;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+ }
+ button.play.fade:hover{
+    opacity: 0.5;
+ }*/
  button:hover{
- 	-moz-box-shadow: 10px 10px 10px lavenderblush;
-  -webkit-box-shadow: 10px 10px 10px lavenderblush;
-  box-shadow: 5px 5px 5px lavenderblush;
+
+ 	-moz-box-shadow: 2px 2px 2px indianred;
+  -webkit-box-shadow: 2px 2px 2px indianred;
+  box-shadow: 2px 2px 2px indianred;
  }
 
  .trib{
@@ -39,18 +87,19 @@
  }
 
  .banner{
- 	font-family: Garamond;
- 	color: lavenderblush;
+ 	border-radius: 1em;
+ 	font-family: Verdana;
+ 	color: indianred;
  	text-align: center;
- 	background-color: rgba(43,34,34,.5);
- 	border: 2px solid rgba(43,34,34,1);
- 	width:75%;
- 	margin-left: 12.5%;
+ 	background-color: rgba(255,255,255,.5);
+ 	border: none;
+ 	width:50%;
+ 	margin-left: 25%;
  }
  .banner:hover{
- 	-moz-box-shadow: 1px 5px 1px indianred;
-  -webkit-box-shadow: 1px 5px 1px indianred;
-  box-shadow: 1px 5px 1px indianred;
+ 	-moz-box-shadow: 1px 5px 1px lavenderblush;
+  -webkit-box-shadow: 1px 5px 1px lavenderblush;
+  box-shadow: 1px 5px 1px lavenderblush;
  }
  h1.banner{
  	font-size: 4em;
@@ -58,8 +107,40 @@
  h3.banner{
  	font-size: 1.25em;
  }
+ .victor{
+ 	font-family: verdana;
+ 	font-weight: bold;
+ 	color: indianred;
+ 	text-align: center;
+ 	width: 75%;
+ 	margin-left: 12.5%;
+ 	border: darkgoldenrod 5px dotted;
+ }
+ h1.victor{
+ 	font-size: 4em;
+ }
+ h3.victor{
+ 	font-size: 1.25em;
+ }
+ .winner{
+ 	border-radius: 1.25em;
+ 	width: 80%;
+ 	height: 6em;
+ 	margin-left: 10%;
+ 	margin-bottom: 50px;
+ }
+ .announce{
+ 	color: goldenrod;
+ 	font-size: 3em;
+ 	font-family: Helvetica;
+ 	font-weight: bold;
+ 	text-decoration: underline;
+ 	text-align: center;
+ 	width: 75%;
+ 	margin-left: 12.5%;
+ }
 
  body{
- 	background: url(http://static2.wikia.nocookie.net/__cb20120425034130/m__/merlin1/images/e/e1/Chain_Mail.jpg);
- 	background-size: cover;
+ 	background: rgba(255,255,255,.9);
+
  }
